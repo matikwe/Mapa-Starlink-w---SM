@@ -5,6 +5,11 @@ on:
 jobs:
   deploy-prod:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node: [14]
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
